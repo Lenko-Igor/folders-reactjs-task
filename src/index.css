@@ -11,3 +11,53 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+h3 {
+  color: red;
+}
+ul {
+  list-style: none;
+  position: relative;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 35px;
+}
+.closed {
+  display: none;
+}
+.opened {
+  display: block;
+}
+.folder__closed::before {
+  content: url('./assets/folder.svg');
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.folder__opened::before {
+  content: url('./assets/folder-opened.svg');
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.file {
+  position: relative;
+  font-weight: normal;
+  color: grey;
+}
+.file::before {
+  content: url('./assets/file.svg');
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.file:hover {
+  color: blue;
+  font-size: bold;
+}
